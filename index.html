@@ -1,19 +1,27 @@
-<html lang="zh">
+---
+layout: default
+class: home
+css: ['main.css']
+comments: false
+---
+<!--
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>拾念</title>
-    <!-- FontAwesome -->
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <!-- Main CSS -->
     {% for css in page.css %}
     <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/main.css">
     {% endfor %}
-    <!-- Jquery -->
+
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
 </head>
+-->
 
-<body>
+{% assign assets_base_url = site.url %}
+{% if site.cdn.jsdelivr.enabled %}
+{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
+{% endif %}
 <header class="header-global">
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
         <div class="container">
@@ -238,5 +246,3 @@
     }
     init()
 </script>
-</body>
-</html>

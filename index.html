@@ -1,10 +1,3 @@
----
-layout: default
-class: home
-css: ['main.css']
-comments: false
----
-
 <html lang="zh">
 <head>
     <meta charset="utf-8"/>
@@ -14,7 +7,7 @@ comments: false
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Main CSS -->
     {% for css in page.css %}
-    <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/{{css}}">
+    <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/main.css">
     {% endfor %}
     <!-- Jquery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>

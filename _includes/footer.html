@@ -1,0 +1,54 @@
+<a id="scrollup" href="#" style="display: none;">
+    <button id="scrollbtn" class="btn btn-icon-only rounded-circle btn-secondary scrollup-btn">
+        <span class="btn-inner--icon">
+            <i class="fa fa-arrow-up" aria-hidden="true"></i>
+        </span>
+    </button>
+</a>
+
+<!-- scrollup -->
+<script>
+    $(function(){
+        var scrollBottom = parseInt($("#adminbtn").css("bottom")) + parseInt($("#adminbtn").css("height")) + 25;
+        $("#scrollbtn").css("bottom", scrollBottom);
+        var resizeTimer;
+        $(window).resize(function(e) {
+            if ($("#adminbtn").length > 0)
+            {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function() {
+                    scrollBottom = parseInt($("#adminbtn").css("bottom")) + parseInt($("#adminbtn").css("height")) + 25;
+                    $("#scrollbtn").css("bottom", scrollBottom);
+                }, 250);
+            }
+        });
+        var scrollLock = 0;
+        if ($(window).scrollTop() > 500) $("#scrollup").fadeIn(400);
+        $(window).scroll(function() {
+            if (!scrollLock)
+            {
+                if ($(window).scrollTop() > 500) $("#scrollup").fadeIn(400);
+                else $("#scrollup").fadeOut(400);
+            }
+        });
+        $("#scrollup").click(function() {
+            scrollLock = 1;
+            $("#scrollup").fadeOut(400);
+            $("html,body").animate({scrollTop: "0px"}, 500, function() {
+                scrollLock = 0;
+            });
+        });
+    });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.js"></script>
+<script>
+    function alert(main,detail){
+        $("#msgMain").html(main)
+        if(detail) $("#msgDetail").html(detail)
+        else $("#msgDetail").html("")
+        $("#modal-notification").show("normal");
+    }
+    init()
+</script>
+</body>
+</html>

@@ -579,11 +579,22 @@ pre code {
     max-height: 340px;
 }
 
+pre[class*="language-"].line-numbers {
+    padding-top: 2em;
+}
+
+:not(pre) > code[class*="language-"], pre[class*="language-"] {
+    background: #282c34;
+}
+
 .pre-bar {
+    position: absolute;
     display: block;
     background: url({{ assets_base_url }}/images/640.png) 10px 10px / 40px no-repeat rgb(40, 44, 52);
     height: 30px;
     width: 100%;
+    left: 0;
+    top: 0;
     margin-bottom: -7px;
     border-radius: 5px;
 }

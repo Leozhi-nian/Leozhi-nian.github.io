@@ -68,8 +68,15 @@ navs:
 # ---------------- #
 #      Jekyll      #
 # ---------------- #
+markdown: kramdown
+kramdown:
+  input: GFM
+highlighter: rouge
 paginate: 5
 paginate_path: "page:num"
+lsi: false
+quiet: false
+excerpt_separator: "\n\n"
 plugins:
   - jekyll-github-metadata
   - rouge

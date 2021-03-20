@@ -1,5 +1,3 @@
-/* Modified Argon CSS */
-
 :root {
     --blue: #5e72e4;
     --indigo: #5603ad;
@@ -22,10 +20,8 @@
     --info: #11cdef;
     --warning: #fb6340;
     --danger: #f5365c;
-    --light: #adb5bd;
     --dark: #212529;
     --default: #172b4d;
-    --white: #fff;
     --neutral: #fff;
     --darker: black;
     --breakpoint-xs: 0;
@@ -33,8 +29,8 @@
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --font-family-sans-serif: 'Noto Sans SC', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-family-monospace: JetBrains-Mono, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
 }
 
 *,
@@ -10217,6 +10213,14 @@ a.text-darker:focus {
     blockquote {
         border: .0625rem solid #adb5bd;
         page-break-inside: avoid;
+    }
+    .pre-bar {
+        display: block;
+        background: url({{ assets_base_url }}/images/640.png) 10px 10px / 40px no-repeat rgb(40, 44, 52);
+        height: 30px;
+        width: 100%;
+        margin-bottom: -7px;
+        border-radius: 5px;
     }
     thead {
         display: table-header-group;

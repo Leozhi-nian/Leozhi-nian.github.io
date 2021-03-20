@@ -579,6 +579,15 @@ pre code {
     max-height: 340px;
 }
 
+.pre-bar {
+    display: block;
+    background: url({{ assets_base_url }}/images/640.png) 10px 10px / 40px no-repeat rgb(40, 44, 52);
+    height: 30px;
+    width: 100%;
+    margin-bottom: -7px;
+    border-radius: 5px;
+}
+
 .container {
     width: 100%;
     margin-right: auto;
@@ -10213,14 +10222,6 @@ a.text-darker:focus {
     blockquote {
         border: .0625rem solid #adb5bd;
         page-break-inside: avoid;
-    }
-    .pre-bar {
-        display: block;
-        background: url({{ assets_base_url }}/images/640.png) 10px 10px / 40px no-repeat rgb(40, 44, 52);
-        height: 30px;
-        width: 100%;
-        margin-bottom: -7px;
-        border-radius: 5px;
     }
     thead {
         display: table-header-group;

@@ -5,12 +5,31 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
         <title>拾念</title>
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+        <!-- FontAwesome -->
         <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/main.css">
         {% for css in page.css %}
         <link rel="stylesheet" href="{{ assets_base_url }}/assets/css/main.css">
         {% endfor %}
+        <!-- KaTeX CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css">
 
+        <!-- PrismJS CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/themes/prism-okaidia.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/toolbar/prism-toolbar.css" />
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/prismjs@1.20.0/plugins/line-numbers/prism-line-numbers.css" />
+
+        <!-- Viewer CSS -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/viewerjs/dist/viewer.min.css" />
+        <!-- Jquery -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <!-- Custom CSS -->
+        <!-- Viewer.js Plugin -->
+        <script src="https://cdn.jsdelivr.net/npm/viewerjs/dist/viewer.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/fengyuanchen/jquery-viewer@master/dist/jquery-viewer.min.js"></script>
     </head>
 </head>
 <body class="{{ page.class }}" data-mz="{{ page.class }}">
@@ -67,4 +86,4 @@
         </div>
     </nav>
 </header>
-    <!-- / header -->
+<!-- / header -->

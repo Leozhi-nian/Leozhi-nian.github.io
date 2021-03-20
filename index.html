@@ -5,6 +5,10 @@ css: ['main.css']
 comments: false
 ---
 
+{% assign assets_base_url = site.url %}
+{% if site.cdn.jsdelivr.enabled %}
+{% assign assets_base_url = "https://cdn.jsdelivr.net/gh/" | append: site.repository | append: '@master' %}
+{% endif %}
 <div id="pjax-container">
     <main>
         <section class="section section-lg section-hero section-shaped" style="height: 100vh;">
@@ -50,8 +54,6 @@ comments: false
                                         <i class="fa fa-calendar-o" aria-hidden="true"></i>
                                         <time datetime="2021-03-19T05:10:00+08:00">{{ post.date | date: "%Y/%m/%d" }}</time>
                                     </span>
-                                    <span class="list-tag"><i class="fa fa-comments-o"
-                                                              aria-hidden="true"></i> 0 条评论</span>
                                     {% for cat in post.categories %}
                                     <span class="list-tag">
                                         <i class="fa fa-folder-o" aria-hidden="true"></i>
